@@ -22,6 +22,11 @@ jobs:
       - name: Powershelllll
         uses: Azure/powershell@v1
         with:
+          azPSVersion: latest
+          errorActionPreference: Stop
+          failOnStandardError: true
           inlinescript: |
-            Write-Host "Hello World"
+            Write-Host "Hello Earth"
+            Write-Host "Hello Moon"
+            Write-Host "Hello Mars"
             
