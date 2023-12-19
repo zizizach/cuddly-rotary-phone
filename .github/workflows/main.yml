@@ -19,7 +19,13 @@ jobs:
   Hello-World:
     runs-on: windows-latest
     steps:
-      - name: Powershelllll
+      - name: pwsh script
+        shell: pwsh
+        run: |
+          Write-Host "Hello A"
+          Write-Host "Hello B"
+          Write-Host "Hello C"
+      - name: Azure Powershelllll
         uses: Azure/powershell@v1
         with:
           azPSVersion: latest
