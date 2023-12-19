@@ -22,9 +22,13 @@ jobs:
       - name: pwsh script
         shell: pwsh
         run: |
-          Write-Host "Hello A"
-          Write-Host "Hello B"
-          Write-Host "Hello C"
+          Write-Host "Hello $env:USERNAME"
+          Write-Host "Hello $env:COMPUTERNAME"
+          Write-Host "Hello $env:HOMEPATH"
+      - name: list dir
+        shell: pwsh
+        run: |
+          get-childItem ${{github.workspace}}
       - name: Azure Powershelllll
         uses: Azure/powershell@v1
         with:
